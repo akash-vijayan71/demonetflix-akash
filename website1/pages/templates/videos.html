@@ -1,0 +1,73 @@
+{% extends 'master.html' %}
+{% load static %}
+
+    {% block title %}
+    Videos Page
+    {% endblock %}
+
+    {% block content %}
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=""><img src="{% static 'img3.png' %}" alt="" width="70px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/index">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">CONTACT</a>
+              </li>
+              <li class="">
+                <a class="nav-link" href="/videos"><button class="signup-link3">VIDEOS</button></a>
+              </li>
+            </ul>
+          <a href="/logout" class="icon1">
+            <button class="signup-link"><i class="bi bi-box-arrow-right"></i></button>
+          </a>
+          </div>
+        </div>
+      </nav>
+    
+    <section class="bgvideocontainer">
+      <h1 class="linker1">VIDEOS</h1>
+        <div class="container">
+            <div class="row">
+                {% for x in videos %}
+                <div class="col-sm-6 col-xl-4 col-md-6">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal{{ loop.index }}">                 
+                        <div class="inbox"> 
+                            <video src="/media/{{ x.v_video }}" width="100%" class="curvideo" poster="/media/{{ x.v_thumbnail }}" ></video>
+                            <h3 class="v_name heading2">{{ x.v_name }}</h3>              
+                        </div>
+                    </button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    
+    {% for x in videos %}
+    <div class="modal fade" id="modal{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video src="" width="100%" id="myvideo" controls></video>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    
+
+    {% endblock %}
+    

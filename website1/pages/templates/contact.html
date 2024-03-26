@@ -1,0 +1,45 @@
+{% extends 'master.html' %}
+{% load static %}
+    {% block title %}
+    contact Page
+    {% endblock %}
+
+    {% block content %}
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=""><img src="{% static 'img3.png' %}" alt="" width="70px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar" >
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/index">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">CONTACT</a>
+              </li>            
+            </ul>                 
+          </div>
+        </div>
+      </nav>
+    <section class="section3">
+    <h1 class="linker">Contact Page</h1>
+    <div class="conbox">
+    <form action="" method="post">
+      <h6>HOW CAN WE HELP YOU?</h6>
+        {% csrf_token %}
+        <label for="con_name">Enter Your Name:</label>
+        <input type="text" name="con_name" id="con_name">
+        <br><br>
+        <label for="con_email">Enter Your Email:</label>
+        <input type="email" name="con_email" id="con_email">
+        <br><br>
+        <label for="con_message">Enter Your Message:</label>
+        <textarea name="con_message" id="con_message" cols="30" rows="10"></textarea>
+        <br><br>
+        <button>SUBMIT</button>
+    </form>
+</div>
+</section>
+    {% endblock %}

@@ -1,0 +1,205 @@
+.linker{
+    text-align: center;
+    text-decoration: underline;
+}
+.apbox{
+    width: 400px;
+    margin: auto;
+    height: 400px;
+    background-color: rgb(230, 214, 195);
+    padding: 30px;
+}
+.inbox{
+    text-align: center;
+    margin: 20px;
+   box-shadow: 0px 0px 10px black;
+   background-color: #040404;
+   border-radius: 5px;
+}
+.inbox:hover{
+    transform: scale(1.07);
+    transition: 0.5s;
+}
+.inpbox{
+   margin: auto;
+   text-align: center;
+   width: 400px;
+   background-color: rgb(36, 35, 35);
+   color: white;
+   border-radius: 20px;
+   border: 1px solid black;
+   padding: 50px;
+}
+.inpbox label{
+    color: rgba(220, 20, 60,0.8);
+}
+.inpbox input,.inpbox2 input{
+    background-color: #302f2f;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+
+}
+.section2 h1{
+
+  padding: 50px 0px;
+}
+.inpbox input::placeholder,.inpbox2 input::placeholder{
+    color: #636262;
+    font-size: 15px;
+}
+.inpbox button{
+    padding: 5px 25px ;
+    color:white ;
+   outline: none;
+    border: none;
+    background-color: crimson;
+    width: 150px;
+}
+.inpbox2 button:hover{
+    background: rgb(229, 47, 84);
+}
+.inpbox2 button{
+    padding: 5px 25px ;
+    color:white ;
+   outline: none;
+    border: none;
+    background-color: crimson;
+    width: 150px;
+}
+
+.icon1{
+    font-size: 16px;
+
+}
+.section1{
+    background-image: url("img1.jpg");
+    background-size: cover;  
+}
+.icon2{
+    margin: 20px 30px;
+}
+.inbox1{
+    padding: 400px 0px;
+    text-align: center;
+    color: aliceblue;
+}
+.notify{
+    color: darkred;
+    font-size: 30px;
+}
+.inpbox2{
+    margin: auto;
+    text-align: center;
+    width: 400px;
+    border-radius: 30px;
+    background-color: rgb(101, 100, 99);
+    padding: 60px 40px;
+}
+.section2{
+    background-image: url(img2.jpg);
+    background-size: cover;
+    height: 677px;
+}
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav-right {
+  float: right;
+}
+.nav-item a:hover{
+    background-color: #ddd;
+    color: black;
+}
+.conbox{
+    width: 400px;
+    margin-left: 10px;
+    background-color: rgb(230, 214, 195);
+    padding: 50px;
+    border: 2px solid black;
+    
+}
+.section3{
+    background-image: url("img4.png");
+    background-size: cover;
+    height: 677px;
+}
+.signup-link{
+    background-color: rgb(179, 11, 11);
+    color: aliceblue;
+    padding: 5px 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: all 0.5s;
+}
+.signup-link2{
+    background-color: rgb(179, 11, 11);
+    color: aliceblue;
+    padding: 5px 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.signup-link:hover{
+    background-color: rgb(87, 5, 5);
+    transform: scale(1.01);
+}
+.signup-link2:hover{
+    background-color: rgb(87, 5, 5);
+    transform: scale(1.01);
+}
+.linker1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(145, 145, 145);
+    font-size: 60px;
+    text-shadow: 15px 15px 30px rgb(0, 0, 0);
+    font-weight: 900;   
+}
+.signup-link3{
+    background-color: rgb(168, 0, 34);
+    border-radius: 30px;
+    padding: 0px 17px;
+    color: azure;
+}
+.signup-link3:hover{
+    background-color: rgb(87, 5, 5);
+    transform: scale(1.01);
+}
+.mainheading{
+color: crimson;
+font-size: 50px;
+font-family: fantasy;
+}
+.heading2{
+    font-size: 17px;
+    padding: 10px 0px;
+    color: #ffff;
+    
+}
+.bgvideocontainer{
+    background-color: #302f2f;
+}
+.section4{
+    background-image: url(img5.jpg);
+    background-size: cover;
+    height: 677px;
+}

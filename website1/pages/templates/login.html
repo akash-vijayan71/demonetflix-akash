@@ -1,0 +1,45 @@
+{% extends 'master.html' %}
+{% load static %}
+
+    {% block title %}
+    login Page
+    {% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" ><img src="{% static 'img3.png' %}" alt="" width="70px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">CONTACT</a>
+          </li>
+        </ul>          
+      </a></span>
+      </div>
+    </div>
+  </nav>
+  <section class="section2">
+    <h1 class="linker text-white" style=" color: rgb(255, 0, 47); font-weight: bolder; text-decoration: none; text-shadow: 7px 10px 6px; border-radius: 3px solid white ;">Login Page</h1>
+    <div class="inpbox">
+    <form action="/login" method="post">
+    {% csrf_token %}
+    <label for="log_uname">Enter Username:</label>
+    <input type="text" name="log_uname" id="log_uname" placeholder="Enter Your Name">
+    <br><br>
+    <label for="log_pwd">Enter Your Password:</label>
+    <input type="password" name="log_pwd" id="log_pwd" placeholder="Enter Your Password">
+    <br><br>
+    <a href="/videos">
+    <button>Submit</button>
+    </a>
+    </form>
+</div>
+</section>
+{% endblock %}

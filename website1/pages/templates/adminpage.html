@@ -1,0 +1,59 @@
+{% extends 'adminmaster.html' %}
+{% load static %}
+
+    {% block title %}
+    Admin Page
+    {% endblock %}
+
+{% block content %}
+
+<section>
+    
+    <div class="topnav">
+        <a href="/index">Goto Website</a>
+        <div class="topnav-right">
+          <a href="/addvideos">AddVideos</a>
+          
+        </div>
+      </div>
+    <h1 class="linker">Admin Page</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="inbox3">
+                    <h3>Video</h3>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="inbox3">
+                    <h3>Name</h3>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="inbox3 text-center">
+                    <h3>Action</h3>
+                </div>
+            </div>
+        </div>
+        {% for x in videos %}
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="inbox4">
+                    <h5><video src="/media/{{ x.v_video }}" width="100%" controls></video></h5>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="inbox4">
+                    <h5>{{ x.v_name }}</h5>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="inbox4 text-center">
+                    <a href="/deletevideo/{{ x.id }}"><button><i class="bi bi-trash3-fill"></i></button></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

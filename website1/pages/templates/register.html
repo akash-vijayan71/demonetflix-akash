@@ -1,0 +1,58 @@
+{% extends 'master.html' %}
+{% load static %}
+    {% block title %}
+    contact Page
+    {% endblock %}
+
+    {% block content %}
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand"><img src="{% static 'img3.png' %}" alt="" width="70px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/index">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">CONTACT</a>
+              </li>
+            </ul>          
+           <span> <a href="/login">
+            <button  class="signup-link2">LOGIN</button>
+          </a></span>
+          </div>
+        </div>
+      </nav>
+      <section class="section4">
+    <h1 class="linker" style="color: rgb(250, 249, 249);  font-weight: bolder; text-decoration: none; text-shadow: 4px 7px 6px;">Register Page</h1>
+    <div class="inpbox2">
+        <span class="notify">
+        {% for msg in messages %}
+        {{ msg }}
+      {% endfor %}
+    </span>
+    <form action="/register" method="post">
+        {% csrf_token %}
+        <label for="reg_name">Enter Your Name:</label>
+        <input type="text" name="reg_name" id="reg_name" required placeholder="Enter Your Name">
+        <br><br>
+        <label for="reg_email">Enter Your Email:</label>
+        <input type="email" name="reg_email" id="reg_email" required placeholder="Enter Your email">
+        <br><br>
+        <label for="reg_phone">Enter Your Phone:</label>
+        <input type="number" name="reg_phone" id="reg_phone" required placeholder="Enter Phone Number">
+        <br><br>
+        <label for="reg_uname">Enter Your Username:</label>
+        <input type="text" name="reg_uname" id="reg_uname" required placeholder="Enter Your username">
+        <br><br>
+        <label for="reg_pwd">Enter Your Password:</label>
+        <input type="password" name="reg_pwd" id="reg_pwd" required placeholder="Enter Your Password">
+        <br><br>
+        <button type="sumbit">submit</button>
+    </form>
+    </div>
+  </section>
+    {% endblock %}

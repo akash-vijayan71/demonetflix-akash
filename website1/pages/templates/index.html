@@ -1,0 +1,124 @@
+{% extends 'master.html' %}
+{% load static %}
+
+    {% block title %}
+    home Page
+    {% endblock %}
+
+
+    {% block content %}
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand"><img src="{% static 'img3.png' %}" alt="" width="60px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar" >
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/index">HOME</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/contact">CONTACT</a>
+              </li>    
+              {% if 'user' in request.session %}
+              <li class="">
+                <a class="nav-link " href="/videos"><button class="signup-link3">VIDEOS</button></a>
+              </li>
+              {% endif %}        
+            </ul>  
+            {% if 'user' in request.session %}
+            <a href="/logout" class="icon1">
+              <button class="signup-link"><i class="bi bi-box-arrow-right"></i></button>
+            </a>
+            {% else %}
+           <span  class="icon1"> <a href="/login">
+            <button class="signup-link2">LOGIN</button>
+          </a></span>
+          <li class="">
+            <a class="" href="/register"><button class="signup-link">SIGN UP</button></a>
+          </li>
+          {% endif %}
+          </div>
+        </div>
+      </nav>
+  <section class="section1">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="inbox1">
+            <h1 class="mainheading">TRAILER VIDEOS</h1>
+              <h1>REGISTER FOR FREE!</h1>
+              <p>Now You Can Watch Unlimited TRAILER Videos</p>
+              {% if 'user' not in request.session %}
+              <p>If Not Registered <a href="/register">REGISTER NOW</a></p>
+              {% endif %}
+              <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+      <section class="bg-black">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="inbox2 py-5 text-center text-white">
+                <i class="bi-facebook icon2"></i>
+                <i class="bi-whatsapp icon2"></i>
+                <i class="bi-twitter icon2"></i>
+                <i class="bi-instagram icon2"></i>
+                <i class="bi-linkedin icon2"></i>
+              </div>          
+            </div>
+          </div>
+          <div class="row text-white">
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-md-5 offset-md-1 mb-3">
+              <form>
+                <h5>Subscribe to our newsletter</h5>
+                <p>Monthly digest of what's new and exciting from us.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <label for="newsletter1" class="visually-hidden">Email address</label>
+                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                  <button class="btn btn-primary" type="button">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    {% endblock %}
+    

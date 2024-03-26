@@ -1,0 +1,28 @@
+{% extends 'master.html' %}
+{% load static %}
+
+    {% block title %}
+    Addproduct Page
+    {% endblock %}
+
+{% block content %}
+<h1>AddVideos Page</h1>
+<div class="apbox">
+    <form action="/addvideos" enctype="multipart/form-data" method="post">
+      {% csrf_token %}
+        <div class="mb-3 mt-3">
+          <label for="v_name" class="form-label">Enter Video Name:</label>
+          <input type="text" class="form-control" id="v_name" placeholder="Enter name" name="v_name">
+        </div>
+        <div class="mb-3">
+          <label for="v_video" class="form-label">enter video:</label>
+          <input type="file" class="form-control" id="v_video" placeholder="Insert image " name="v_video">
+        </div>
+        <div class="mb-3">
+          <label for="v_thumbnail" class="form-label">Select Thumbnail:</label>
+          <input type="file" class="form-control" id="v_thumbnail" placeholder="Insert thumbnail " name="v_thumbnail">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+{% endblock %}

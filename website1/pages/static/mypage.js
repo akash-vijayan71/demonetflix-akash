@@ -1,0 +1,1 @@
+document.getElementById("linker").innerHTML="parrots"
